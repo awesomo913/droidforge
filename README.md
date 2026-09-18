@@ -14,7 +14,7 @@ DroidForge is a local Android testing tool built as a leaner alternative to Andr
 - **Session logging** — each test run is written to a session log file for later review.
 
 ## Stack
-Python 3.11, CustomTkinter (GUI), Pillow, `adb`/`scrcpy` wrappers around the Android SDK command-line tools.
+Python 3.11, CustomTkinter (GUI), Pillow, `adb`/`scrcpy` wrappers around the Android SDK command-line tools. AI crash triage needs the `anthropic` SDK (not in `requirements.txt` — install it separately).
 
 ## Getting started
 **Requirements**
@@ -24,6 +24,7 @@ Python 3.11, CustomTkinter (GUI), Pillow, `adb`/`scrcpy` wrappers around the And
 **Run**
 ```bash
 uv pip install -r requirements.txt
+uv pip install anthropic  # optional — only needed for the AI crash-triage feature
 python cli.py doctor      # verify SDK setup
 python cli.py devices     # list connected devices
 python cli.py gui         # launch the desktop app
